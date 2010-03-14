@@ -1,0 +1,13 @@
+<span class="date"><f:format.date>{company.date}</f:format.date></span>
+<h1>{company.company}</h1>
+<div class="vcard">
+	<p><span>Forename</span>{company.forename}</p>
+	<p><span>Lastname</span>{company.lastname}</p>
+	<p><span>Address</span>{company.address}</p>
+</div>
+
+<ul>
+	<f:for each="{company.category}" as="category">
+		<li>{category.title}</li>
+	</f:for>
+</ul>

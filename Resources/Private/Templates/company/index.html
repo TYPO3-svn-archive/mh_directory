@@ -1,0 +1,24 @@
+<f:layout name="default" />
+<f:section name="content">
+	<f:if condition="{companies}">
+		<f:then>
+			<f:for each="{companies}" as="company">
+				<div class="company" style="border:1px solid #ddd; padding:5px;">
+					<span><f:for each="{company.category}" as="category">{category.title} </f:for></span>
+					<f:link.action action="show" arguments="{company: company.uid}">
+						<h1>{company.company}</h1>
+					</f:link.action>
+					<p>
+						{company.forename} {company.lastname}<br />
+						{company.address}
+					</p>
+					
+					<p>{company.description}</p>
+				</div>
+			</f:for>
+		</f:then>
+		<f:else>
+			<p><f:translate key="tx_mhdirectory_domain_model_company.no_entries" /></p>
+		</f:else>
+	</f:if>
+</f:section>

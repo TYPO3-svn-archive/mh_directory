@@ -1,0 +1,9 @@
+plugin.tx_mhdirectory.settings {
+}
+
+plugin.tx_mhdirectory._CSS_DEFAULT_STYLE (
+	input.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+)

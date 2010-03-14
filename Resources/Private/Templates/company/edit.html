@@ -1,0 +1,47 @@
+
+
+
+
+<h1>Edit company</h1>
+
+<!-- TODO: make this a partial -->
+<f:form.errors for="company">
+	<div class="error">
+		{error.message}
+		<f:if condition="{error.propertyName}">
+			<p>
+				<strong>{error.propertyName}</strong>:
+				<f:for each="{error.errors}" as="errorDetail">
+					{errorDetail.message}
+				</f:for>
+			</p>
+		</f:if>
+	</div>
+</f:form.errors>
+
+<f:form method="post" action="update" name="company" object="{company}">
+
+	
+	<label for="title"><f:translate key="tx_mhdirectory_domain_model_company.company" /> <span class="required">(required)</span></label><br />
+	<f:form.textbox property="company" /><br />
+	
+
+	
+	<label for="title"><f:translate key="tx_mhdirectory_domain_model_company.forename" /> <span class="required">(required)</span></label><br />
+	<f:form.textbox property="forename" /><br />
+	
+
+	
+	<label for="title"><f:translate key="tx_mhdirectory_domain_model_company.lastname" /> <span class="required">(required)</span></label><br />
+	<f:form.textbox property="lastname" /><br />
+	
+
+	
+	<label for="title"><f:translate key="tx_mhdirectory_domain_model_company.address" /> <span class="required">(required)</span></label><br />
+	<f:form.textbox property="address" /><br />
+	
+
+	
+
+<f:form.submit value="Edit" />
+</f:form>

@@ -1,0 +1,25 @@
+<T3DataStructure>
+  <sheets>
+    <sDEF>
+      <ROOT>
+        <TCEforms>
+          <sheetTitle>Options</sheetTitle>
+        </TCEforms>
+        <type>array</type>
+        <el>
+			<settings.modules>
+	<TCEforms>
+		<label>Punkt 1</label>
+		<config>
+			<type>input</type>
+			<size>30</size>
+			<eval>trim</eval>
+			<default>Test 1</default>
+		</config>
+	</TCEforms>
+          </settings.modules>
+        </el>
+      </ROOT>
+    </sDEF>
+  </sheets>
+</T3DataStructure>

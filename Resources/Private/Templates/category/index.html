@@ -1,0 +1,25 @@
+<f:section name="categories">
+	<h1><f:translate key="cateroy_index_caption">Categories</f:translate></h1>
+	<br />
+	<f:if condition="{categories}">
+		<f:then>
+			<f:for each="{categories}" as="category">
+				<f:cycle values="{0:'odd', 1:'even'}" as="alternate">
+					<dl class="category_item {alternate}">	
+						<dt class="category_title"><f:link.action controller="Category" action="list" arguments="{category : category}">{category.title}</f:link.action></dt>
+						<!--<dd><f:image src="uploads/pics/{category.image}" alt="{category.title}" width="150" /></dd>-->
+						<dd class="category_desc">{category.description}</dd>
+					</dl>
+				</f:cycle>
+			</f:for>
+		</f:then>
+		<f:else>
+			<p><f:translate key="tx_mhdirectory_domain_model_category.no_entries" /></p>
+		</f:else>
+	</f:if>
+	<br />
+	
+	<h2><f:translate key="category_index_last">The last 3 entries ...</f:translate></h2>
+	<f:render partial="category_items" arguments="{companies:companies}" />
+	
+</f:section>

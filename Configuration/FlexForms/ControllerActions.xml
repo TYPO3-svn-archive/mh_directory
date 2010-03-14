@@ -1,0 +1,32 @@
+<T3DataStructure>
+	<sheets>
+	<sDEF>
+		<ROOT>
+			<TCEforms>
+				<sheetTitle>Module</sheetTitle>
+			</TCEforms>
+			<type>array</type>
+			<el>
+				<switchableControllerActions>
+					<TCEforms>
+						<label>Default-Action</label>
+						<config>
+							<type>select</type>
+							<items>
+								<numIndex index="0">
+									<numIndex index="0">Companies</numIndex>
+									<numIndex index="1">Company->index;Company->show</numIndex>
+								</numIndex>
+								<numIndex index="1">
+									<numIndex index="0">Categories</numIndex>
+									<numIndex index="1">Category->index;Category->list</numIndex>
+								</numIndex>
+							</items>
+						</config>
+					</TCEforms>
+				</switchableControllerActions>
+			</el>
+		</ROOT>
+	</sDEF>
+	</sheets>
+</T3DataStructure>

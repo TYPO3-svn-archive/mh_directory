@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+    <meta type="array">
+        <description>Ontext Sensitive Help (CSH) for table tx_mhdirectory_domain_model_company</description>
+        <type>CSH</type>
+        <csh_table>tx_mhdirectory_domain_model_company</csh_table>
+    </meta>
+    <data type="array">
+        <languageKey index="default" type="array">
+			<label index="company.description">Company</label>
+			<label index="forename.description">Forename</label>
+			<label index="lastname.description">Lastname</label>
+			<label index="address.description">Address</label>
+			<label index="category.description">category</label>
+		</languageKey>
+    </data>
+</T3locallang>

@@ -1,0 +1,47 @@
+<f:section name="companies">
+	<f:if condition="{companies}">
+		<f:then>
+			<f:for each="{companies}" as="company">
+				<div class="company">
+					<span class="company_tags">
+						<f:for each="{company.category}" as="category">{category.title} </f:for>
+					</span>
+					
+					<f:link.action controller="Company" action="show" arguments="{company: company.uid}">
+						<h1>{company.company}</h1>
+					</f:link.action>
+					
+					<p>
+						{company.forename} {company.lastname}<br />
+						{company.address}
+					</p>
+					
+					<p>{company.description}</p>
+					
+					<div class="company_links">
+						
+						<f:image src="{f:uri.resource(path: 'icons/find.png')}" alt="" />
+						<f:link.action controller="Company" action="show" arguments="{company: company}">
+							<f:translate key="company_link_more">More</f:translate>
+						</f:link.action>
+						
+						<f:image src="{f:uri.resource(path: 'icons/email.png')}" alt="" />
+						<f:link.action controller="Company" action="mail" arguments="{company: company}">
+							<f:translate key="company_link_mail">Mail</f:translate>
+						</f:link.action>
+						
+						
+						<f:image src="{f:uri.resource(path: 'icons/vcard.png')}" alt="" />
+						<f:link.action controller="Company" action="vcard" arguments="{company: company}">
+							<f:translate key="company_link_vcard">vCard</f:translate>
+						</f:link.action>
+							
+					</div>
+				</div>
+			</f:for>
+		</f:then>
+		<f:else>
+			<p><f:translate key="no_entries">No entries found.</f:translate></p>
+		</f:else>
+	</f:if>
+</f:section>
